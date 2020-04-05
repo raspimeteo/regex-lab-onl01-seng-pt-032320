@@ -19,7 +19,7 @@ end
 
 def valid_phone_number?(phone)
  ## binding.pry
-  if phone == /\(?([1-9][0-9]{2})\)?[-. ]?([1-9][0-9]{2})[-. ]?([0-9]{4}\b)/
+  if !(phone =~ /\(?([1-9][0-9]{2})\)?[-. ]?([1-9][0-9]{2})[-. ]?([0-9]{4}\b)/).nil?
     true
   else
     false
